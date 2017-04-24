@@ -1,0 +1,4 @@
+<TextBlock ux:Class="BodyCopy" TextColor="{Property this.Color}" Font="Lato_Regular" FontSize="16" Alignment="Center" TextWrapping="Wrap">
+	<float4 ux:Property="Color"/>
+</TextBlock>
+				

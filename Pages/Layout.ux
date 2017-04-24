@@ -1,0 +1,38 @@
+<Page ux:Class="Layout">
+	<Router ux:Dependency="router" />
+	<JavaScript>
+	var Observable = require("FuseJS/Observable");
+       function arrowRight_clicked()
+{
+    router.push("ui_design");
+}
+      function arrowLeft_clicked()
+{
+    router.goBack();
+}
+        module.exports = {
+          arrowLeft_clicked : arrowLeft_clicked,
+          arrowRight_clicked : arrowRight_clicked  
+        };
+	</JavaScript>
+	<ActivatingAnimation>
+		<Change Stroke1.Degrees="-72" Duration="1.8" Easing="QuinticOut" DurationBack="0.4"/>
+		<Callback Handler="{SkillsUpdate}" />
+	</ActivatingAnimation>
+	<ScrollView>
+		<StackPanel  MaxWidth="450">
+			<Components.Title Text="Layout and Typography" TitleColor="PrimarySolid"/>
+			<Grid Columns="1*,3*,1*" Margin="30,0,30,0">
+				<LeftArrow/>
+				<Components.CircleGraph Degrees="270" Text="9.5" Stop1="SecondarySolid" Stop2="#F6977590" ux:Name="Stroke1"/> 
+				<RightArrow/>
+			</Grid>
+			<BodyCopy Color="TextGrey" Margin="0,50,0,0" Width="80%">
+				I’d say that I have a particular obsession with a beatifully constructed layout - and I thoroughly enjoy applying it to my own work. The same can be said for typography, each letter is a piece of art, and  doing a piece of type justice is just as much so.
+			</BodyCopy>
+		</StackPanel>
+	</ScrollView>
+</Page>
+
+
+

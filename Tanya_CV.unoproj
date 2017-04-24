@@ -1,0 +1,30 @@
+{
+  "RootNamespace":"",
+  "Android": {
+      "Package": "com.test.MyTest",
+      "VersionCode": 110,
+      "VersionName": "1.1.0",
+      "Icons": {
+      "LDPI": "Icon-ldpi.png",
+      "MDPI": "Icon-mdpi.png",
+      "HDPI": "Icon-hdpi.png",
+      "XHDPI": "Icon-xhdpi.png",
+      "XXHDPI": "Icon-xxhdpi.png",
+      "XXXHDPI": "Icon-xxxhdpi.png"
+    },
+      "Key": {
+        "Alias": "application",
+        "AliasPassword": "testing",
+        "Store": "release.keystore",
+        "StorePassword": "testing"
+    }
+  },
+  "Packages": [
+      "Fuse",
+      "FuseJS",
+      "Fuse.Launcher"
+  ],
+  "Includes": [
+    "*"
+  ]
+}

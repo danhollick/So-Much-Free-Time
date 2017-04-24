@@ -1,0 +1,55 @@
+<Page ux:Class="ExperiencePage" >
+	<JavaScript File="Experience.js"/>
+	<Router ux:Dependency="router" />
+	<ActivatingAnimation>
+		<Callback Handler="{ExperienceUpdate}" />
+	</ActivatingAnimation>
+	<Panel ux:Name="Cerebra_Overlay" Height="100%" Width="100%" Visibility="Hidden">
+		<WhileTrue ux:Name="Overlay_Toggle">
+            <Change Target="Cerebra_Overlay.Visibility"  Value="Visible"  />
+            <Change Target="BG_Blur.Radius" Value="3"  />
+        </WhileTrue>
+		<Close>
+			<Clicked>
+				<Toggle Target="Overlay_Toggle"/>
+			</Clicked>
+		</Close>
+		<StackPanel Margin="0,80,0,0" Width="90%" >
+			<Text Font="Lato_Regular" FontSize="24" TextColor="White" Margin="20,0,0,0" Alignment="TopLeft"> Responsibilities </Text>
+			<Rectangle Height="1" Width="90%" Color="White" Alignment="Left" Margin="20,10,0,10"/>
+			<List_Item ListText="Art Directing photo and video shoots"/>
+			<List_Item ListText="Art Directing the company Editorial outputs"/>
+			<List_Item ListText="Creative Strategy creation and implementation"/>
+			<List_Item ListText="Developing Social Media CI guides for brands"/>
+			<List_Item ListText="Understanding, implementing and overseeing brands' CI"/>
+			<List_Item ListText="Creating and curating rich media content  for Social"/>
+			<List_Item ListText="Photo editing and manipulation"/>
+			<List_Item ListText="Mentoring junior designers"/>
+		</StackPanel>
+		<Rectangle  Width="100%" Color="#3A4454" Opacity="0.9"   />
+	</Panel>
+	<ScrollView SnapMinTransform="false">
+		<Panel>
+			<Blur ux:Name="BG_Blur" Radius="0" />
+			<StackPanel>
+				<Components.Title Text="Experience Timeline" ux:Name="Experience_Heading" TitleColor="SecondarySolid"/>
+				<StackPanel Margin="0,-40,0,0" ItemSpacing="10"> 
+					<Each Items="{posts}" MatchKey="postType">
+						<Year_Label Year="{yearDate}" Margin="20,0,0,0" ux:Template="Year" />
+						<Event Heading="{title}" Sub_Heading="{place}" Descriptor="{startDate}"  Heading_Color="{jobColor}" Dot_Color="{jobColor}" ux:Template="Job" linkText="{linkText}" />
+						<!-- <Event Heading="{title}" Sub_Heading="{place}" Descriptor="{startDate}"  Heading_Color="{jobColor}" Dot_Color="{jobColor}" ux:Template="Job" linkURL="{linkURL}" linkText="{linkText}" toggleText="{toggleText}"/> -->
+					</Each>
+				</StackPanel>
+				<TextBlock Font="Lato_Regular" Value="Back to Top" ux:Name="BackToTop" FontSize="20" TextColor="PrimarySolid" Alignment="Center" Margin="0,0,0,20">
+					<Clicked>
+		                <BringIntoView TargetNode="Experience_Heading" />
+		             </Clicked>
+		             <WhilePressed>
+		             	<Change BackToTop.Opacity="0.6" />
+		             </WhilePressed>
+				</TextBlock>
+			</StackPanel>
+			<Rectangle Width="1" Color="LightGrey" Margin="47,150,20,120" Alignment="Left"/>
+		</Panel>
+	</ScrollView>
+</Page>

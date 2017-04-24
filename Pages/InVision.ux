@@ -1,0 +1,44 @@
+<Page ux:Class="InVision">
+	<Router ux:Dependency="router" />
+		<JavaScript>
+	var Observable = require("FuseJS/Observable");
+       
+      function arrowLeft_clicked()
+{
+    router.goBack();
+}
+
+        module.exports = {
+          arrowLeft_clicked : arrowLeft_clicked 
+        };
+	</JavaScript>
+	<ActivatingAnimation>
+		<Change Bar1.Percentage="70%" Duration="1.8" Easing="QuinticOut" DurationBack="0.4"/>
+		<Callback Handler="{SoftwareUpdate}" />
+	</ActivatingAnimation>
+		<ScrollView>
+			<StackPanel  MaxWidth="450">
+				<Components.Title Text="InVision" TitleColor="PrimarySolid"/>
+				<Grid Columns="1*,3*,1*" Margin="30,0,30,0">
+					<LeftArrow/>
+					<StackPanel Alignment="Center">
+						<InvisionLogo/>
+						<Components.Score Stop1="#DC395F" Stop2="#E75F7F" Percentage="0%" Text="7.0" ux:Name="Bar1"/>
+					</StackPanel>
+					<RightArrow Visibility="Hidden"/>
+				</Grid>
+				<StackPanel Alignment="Center" Width="80%">
+					<BodyCopy Color="TextGrey" Margin="0,50,0,0" Alignment="Left">
+						InVision is a powerful tool for prototyping flows and interactions. It helps designs come to life and I am in love with it.
+					</BodyCopy>
+					<Text TextColor="PrimarySolid" Font="Lato_Regular" FontSize="16" Margin="0,10,0,0" Alignment="Left" Value="Check out an InVision version of this app here.">
+						<Clicked>
+							<LaunchUri Uri="https://invis.io/F983R5TWP#/172812396_About" />
+						</Clicked>
+						<Rectangle Height="1" Color="PrimarySolid" Alignment="Bottom"/>
+					</Text>
+				</StackPanel>
+		</StackPanel>
+	</ScrollView>
+</Page>
+

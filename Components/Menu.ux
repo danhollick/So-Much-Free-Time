@@ -1,0 +1,72 @@
+<Panel ux:Class="Menu" Visibility="Visible">
+ 	<EdgeNavigator>
+ 		   
+ 		<Panel ux:Name="sidebar" Transition="None" Edge="Left" Width="100%" Margin="0,0,120,0" Color="PrimarySolid">
+ 			<ActivatingAnimation>
+ 				<Change shadow.Color="#0004" />
+ 				<Change sidebarFade.Opacity="1" />
+ 			</ActivatingAnimation>
+
+			<StackPanel >
+				<Close Width="48" Height="48" Alignment="Right" HitTestMode="LocalBoundsAndChildren" >
+					<Clicked>
+						<NavigateToggle Target="sidebar" />
+					</Clicked>
+				</Close>
+				<!-- Menu Items -->
+				<MenuItem Value="Home" ux:Name="Home">
+					<Clicked Handler="{home_clicked}">
+            			<Set Underline.LayoutMaster="Home" />
+            			<NavigateToggle Target="sidebar" />
+        			</Clicked>
+        		</MenuItem>
+				<MenuItem Value="Skills" ux:Name="Skills">
+					<Clicked Handler="{skills_clicked}">
+            			<Set Underline.LayoutMaster="Skills" />
+            			<NavigateToggle Target="sidebar" />
+        			</Clicked>
+        		</MenuItem>
+				<MenuItem Value="Experience" ux:Name="Experience">
+					<Clicked Handler="{experience_clicked}">
+            			<Set Underline.LayoutMaster="Experience" />
+            			<NavigateToggle Target="sidebar" />
+        			</Clicked>
+        		</MenuItem>
+				<MenuItem Value="Software" ux:Name="Software">
+					<Clicked Handler="{software_clicked}">
+            			<Set Underline.LayoutMaster="Software" />
+            			<NavigateToggle Target="sidebar" />
+        			</Clicked>
+        		</MenuItem>
+				<MenuItem Value="Contact" ux:Name="Contact">
+					<Clicked Handler="{contact_clicked}">
+            			<Set Underline.LayoutMaster="Contact" />
+            			<NavigateToggle Target="sidebar" />
+        			</Clicked>
+        		</MenuItem>
+			</StackPanel>
+			<!-- Underline that moves depending on which menu item you click -->
+			<Rectangle Height="1" Color="White" Margin="0,0,0,-4" ux:Name="Underline" LayoutMaster="Home" Alignment="Bottom">
+				<LayoutAnimation>
+		            <Move RelativeTo="WorldPositionChange" X="1" Y="1" Duration="0.1" Easing="CubicInOut" />
+		            <Resize RelativeTo="SizeChange" X="1" Y="1" Duration="0.1" Easing="CubicInOut" />
+		        </LayoutAnimation>
+		    </Rectangle>
+		    <!-- Shadow underneath Menu drawer -->
+		    <Shadow ux:Name="shadow" Angle="180" Distance="8" Size="16" Color="#0000" />
+		</Panel>
+		<!-- Rectangle that darkens the whole background -->
+		<Rectangle ux:Name="sidebarFade"  Color="#0005" Opacity="0" HitTestMode="None" /> 
+		<!-- Header Bar -->
+		<Rectangle Width="100%" Height="50" Color="PrimarySolid" Alignment="TopCenter" >
+			<Hamburger Alignment="CenterLeft" Width="60%">
+				<Clicked>
+					<NavigateToggle Target="sidebar" />
+				</Clicked>
+			</Hamburger>
+			<FeatherIcon Width="36" Height="36" Alignment="CenterRight" Margin="0,0,20,0"/>
+			<!-- Shadow underneath Header -->
+			<Shadow Angle="90" Distance="2" Size="2" Color="#0004" />
+		</Rectangle>
+	</EdgeNavigator>
+</Panel>

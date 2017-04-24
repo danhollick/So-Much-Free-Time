@@ -1,0 +1,7 @@
+<StackPanel Margin="0,70,0,40" ux:Class="Components.Title">
+	<Text Font="Lato_Regular" FontSize="24" TextColor="{Property this.TitleColor}"  Alignment="TopCenter" Value="{Property this.Text}"> 
+		<string ux:Property="Text"/>
+		<float4 ux:Property="TitleColor"/>
+	</Text>
+	<Rectangle Height="1" Width="90%" Color="MidGrey" Margin="0,16,0,20"/>
+</StackPanel>

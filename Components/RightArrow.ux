@@ -1,0 +1,12 @@
+<StackPanel ux:Class="RightArrow" Margin="30,0,0,0" Alignment="Center" Width="48" Height="48" HitTestMode="LocalBoundsAndChildren" Clicked="{arrowRight_clicked}" >
+	<WhilePressed>
+		<Change Target="ArrowRight.Color" Value="#43BDA660"/>
+		<Change Target="ArrowRight1.Color" Value="#43BDA660"/>
+	</WhilePressed>
+	<Rectangle Height="3" Width="16" Color="PrimarySolid" ux:Name="ArrowRight" CornerRadius="2" >
+			<Rotation Degrees="45"/>
+	</Rectangle>
+	<Rectangle Height="3" Width="16" Color="PrimarySolid" Margin="0,7,0,0" ux:Name="ArrowRight1" CornerRadius="2">
+			<Rotation Degrees="-45"/>
+	</Rectangle>
+</StackPanel>

@@ -1,0 +1,5 @@
+<Rectangle Color="PrimarySolid" Width="60" Height="20" CornerRadius="4" ux:Class="Year_Label" Alignment="Left" >
+	<Text Font="Lato_Regular" FontSize="12" Value="{Property this.Year}" TextColor="White" Alignment="Center" > 
+		<string ux:Property="Year"/>
+	</Text>
+</Rectangle>

@@ -1,0 +1,32 @@
+<Page ux:Class="HomePage">
+	<!-- Animation that animates the social buttons -->
+	<ActivatingAnimation>
+		<Callback Handler="{HomeUpdate}" />
+		<Scale Target="behance" Factor="9" Delay="0.7" Duration="1" Easing="BackOut" />
+		<Scale Target="instagram" Factor="9" Delay="0.6" Duration="1" Easing="BackOut" />
+		<Scale Target="linkedin" Factor="9" Delay="0.5" Duration="1" Easing="BackOut" />
+		<Scale Target="twitter" Factor="9" Delay="0.4" Duration="1" Easing="BackOut" />
+	</ActivatingAnimation>
+	<Router ux:Dependency="router" /> 
+	<!-- Main Content-->
+	<ScrollView>
+		<StackPanel>
+			<HeaderImage/>
+			<LogoType />
+			<Text FontSize="30" Font="Lato_Light" TextColor="PrimaryText" Value="Design/Art Director" Alignment="TopCenter" />
+			<BodyCopy Color="TextGrey" Margin="0,20,0,0">
+				Hello there, you brilliant human, you. Not only am I great at what I do, I have no doubt that we’d work wonders together. I’m sure you’ll feel the same when you’re done exploring this app.
+			</BodyCopy>
+		</StackPanel>
+	</ScrollView>
+	<!-- The social buttons -->
+	<DockPanel Dock="Bottom" Alignment="Bottom">
+		<WrapPanel Alignment="Center" Margin="0,20,0,20">
+			<Behance_Logo Width="5" Height="5" Margin="40,0,40,0" ux:Name="behance" />
+			<Instagram_Logo Width="5" Height="5" Margin="40,0,40,0" ux:Name="instagram" />
+			<Linkedin_Logo Width="5" Height="5" Margin="40,0,40,0" ux:Name="linkedin" />
+			<Twitter_Logo Width="5" Height="5" Margin="40,0,40,0" ux:Name="twitter" />
+		</WrapPanel>
+		<Rectangle Height="85" Width="100%" Color="White" Opacity="0.6" />
+	</DockPanel>
+</Page>

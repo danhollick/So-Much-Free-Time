@@ -1,0 +1,27 @@
+<StackPanel Orientation="Horizontal" ux:Class="Event" Margin="22,0,0,0" X="5%" Alignment="Left" >
+	<Circle Width="14" Height="14" Color="{Property this.Dot_Color}" ux:Name="test" Alignment="Top" Margin="0,5,0,0" >
+		<float4 ux:Property="Dot_Color"/>
+	</Circle>
+	<StackPanel Margin="10,0,0,0" Alignment="Left">
+		<Text Font="Lato_Bold" Value="{Property this.Heading}" TextColor="{Property this.Heading_Color}" FontSize="18" Alignment="Left" TextWrapping="Wrap">
+			<string ux:Property="Heading"/>
+			<float4 ux:Property="Heading_Color"/>
+		</Text>
+		<Text Font="Lato_Regular" Value="{Property this.Sub_Heading}" Alignment="Left" TextColor="TextGrey" FontSize="16" TextWrapping="Wrap">
+			<string ux:Property="Sub_Heading"/>
+		</Text>
+		<Text Font="Lato_Regular" Value="{Property this.Descriptor}" Alignment="Left" TextColor="TextGrey" FontSize="16" TextWrapping="Wrap">
+			<string ux:Property="Descriptor"/>
+		</Text>
+		<Text Font="Lato_Regular" Value="{Property this.linkText}" FontSize="16" TextColor="PrimarySolid" Alignment="Left" Margin="0,2,0,0">
+			<Rectangle Height="1" Margin="0,2,0,0" Color="PrimarySolid" Alignment="Bottom"/>
+		<Clicked>
+			<!-- <LaunchUri Uri="{Property this.linkURL}"  /> -->
+			<!-- <Toggle Target="{Property this.toggleText}"/> -->
+		</Clicked>
+		<!-- <string ux:Property="linkURL"/>  -->
+		<string ux:Property="linkText"/>
+		<!-- <IToggleable ux:Property="toggleText"/> -->
+		</Text>
+	</StackPanel>
+</StackPanel>

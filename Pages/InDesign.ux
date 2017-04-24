@@ -1,0 +1,50 @@
+<Page ux:Class="InDesign">
+	<Router ux:Dependency="router" />
+		<JavaScript>
+	var Observable = require("FuseJS/Observable");
+       function arrowRight_clicked()
+{
+    router.push("sketch");
+}
+      function arrowLeft_clicked()
+{
+    router.goBack();
+}
+
+        module.exports = {
+          arrowLeft_clicked : arrowLeft_clicked,
+          arrowRight_clicked : arrowRight_clicked  
+        };
+	</JavaScript>
+	<ActivatingAnimation>
+		<Change Bar1.Percentage="95%" Duration="1.8" Easing="QuinticOut" DurationBack="0.4"/>
+		<Callback Handler="{SoftwareUpdate}" />
+	</ActivatingAnimation>
+	<ScrollView>
+		<StackPanel MaxWidth="450">
+			<Components.Title Text="Adobe Indesign" TitleColor="PrimarySolid"/>
+			<Grid Columns="1*,3*,1*" Margin="30,0,30,0">
+				<LeftArrow/>
+				<StackPanel Alignment="Center">
+					<IndesignLogo/>
+					<Components.Score Stop1="#E33695" Stop2="#E953AA" Percentage="0%" Text="9.5" ux:Name="Bar1"/>
+				</StackPanel>
+				<RightArrow/>
+			</Grid>
+			<StackPanel Width="80%">
+				<BodyCopy Color="TextGrey" Margin="0,50,0,0" Alignment="Left">
+					Many a magazine, eBook or interactive layout has added to my InDesign skillset. 
+				</BodyCopy>
+				<Text TextColor="PrimarySolid" Font="Lato_Regular" Width="80%" FontSize="16" Margin="0,10,0,0" Alignment="Left" Value="See my favourite piece of work here">
+					See my favourite piece of work here
+					<Clicked>
+						<LaunchUri Uri="https://www.behance.net/gallery/28395839/Magazine-Layout-Crumbs" />
+						<Rectangle Height="1" Color="PrimarySolid" Alignment="Bottom"/>
+					</Clicked>
+				</Text>
+			</StackPanel>
+		</StackPanel>
+	</ScrollView>
+</Page>
+
+

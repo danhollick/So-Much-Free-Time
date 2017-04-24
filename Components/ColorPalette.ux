@@ -1,0 +1,9 @@
+<Panel ux:Class="ColorPalette">
+	<float4 ux:Global="SecondarySolid"    ux:Value="#8A5182" />
+	<float4 ux:Global="DarkGrey"    ux:Value="#636363" />
+	<float4 ux:Global="MidGrey"    ux:Value="#979797" />
+	<float4 ux:Global="LightGrey"    ux:Value="#D8D8D8"/>
+	<float4 ux:Global="PrimaryText"  ux:Value="#282D67" />
+	<float4 ux:Global="PrimarySolid"   ux:Value="#426E89" />
+	<float4 ux:Global="TextGrey"   ux:Value="#3A4454" />
+</Panel>

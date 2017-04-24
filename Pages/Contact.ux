@@ -1,0 +1,55 @@
+
+<Page ux:Class="ContactPage" >
+	<ActivatingAnimation>
+		<Callback Handler="{ContactUpdate}" />
+		<Scale Target="behance" Factor="9" Delay="0.7" Duration="1" Easing="BackOut"/>
+		<Scale Target="instagram" Factor="9" Delay="0.6" Duration="1" Easing="BackOut"/>
+		<Scale Target="linkedin" Factor="9" Delay="0.5" Duration="1" Easing="BackOut"/>
+		<Scale Target="twitter" Factor="9" Delay="0.4" Duration="1" Easing="BackOut"/>
+	</ActivatingAnimation>
+	<Router ux:Dependency="router" />
+	<ScrollView>
+		<StackPanel>
+			<ContactImage Width="100%" Alignment="TopCenter"/>
+			<Grid Columns="1*,3*" Rows="32,36,36,36" CellSpacing="20" Margin="20,20,20,10" >
+				<PinIcon/>
+				<Text FontSize="18" Font="Lato_Light" TextColor="PrimaryText" Value="Skillebekk, Oslo" Alignment="CenterLeft" >
+					<Clicked>
+						<LaunchMaps Latitude="59.91330" Longitude="10.71581" />
+					</Clicked>
+					<Rectangle Height="1" Color="PrimarySolid" Alignment="Bottom"/>
+				</Text>
+				<PhoneIcon/>
+				<Text FontSize="18" Font="Lato_Light" TextColor="PrimaryText" Value="+47 939 52 143" Alignment="CenterLeft" >
+					<Clicked>
+						<Call Number="+4793952143" />
+					</Clicked>
+					<Rectangle Height="1" Color="PrimarySolid" Alignment="Bottom"/>
+				</Text>
+				<MailIcon/>
+				<Text FontSize="18" Font="Lato_Light" TextColor="PrimaryText" Value="hirst.tanya@gmail.com" Alignment="CenterLeft" >
+					<Clicked>
+						<LaunchEmail To="hirst.tanya@gmail.com" />
+					</Clicked>
+					<Rectangle Height="1" Color="PrimarySolid" Alignment="Bottom"/>
+				</Text>
+				<WebIcon/>
+				<Text FontSize="18" Font="Lato_Light" TextColor="PrimaryText" Value="isheyelike.co.za" Alignment="CenterLeft" >
+					<Clicked>
+						<LaunchUri Uri="http://www.isheyelike.co.za/" />
+					</Clicked>
+					<Rectangle Height="1" Color="PrimarySolid" Alignment="Bottom"/>
+				</Text>
+			</Grid>
+		</StackPanel>
+	</ScrollView>
+	<DockPanel Dock="Bottom" Alignment="Bottom">
+		<WrapPanel Alignment="Center" Margin="0,20,0,20"  >
+			<Behance_Logo Width="5" Height="5" Margin="40,0,40,0" ux:Name="behance"/>
+			<Instagram_Logo Width="5" Height="5" Margin="40,0,40,0" ux:Name="instagram"/>
+			<Linkedin_Logo Width="5" Height="5" Margin="40,0,40,0" ux:Name="linkedin"/>
+			<Twitter_Logo Width="5" Height="5" Margin="40,0,40,0" ux:Name="twitter"/>
+		</WrapPanel>
+		<Rectangle Height="85" Width="100%" Color="White" Opacity="0.6"/>
+	</DockPanel>
+</Page>

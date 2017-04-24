@@ -1,0 +1,45 @@
+<Page ux:Class="Illustrator">
+	<Router ux:Dependency="router" />
+	<JavaScript>
+	var Observable = require("FuseJS/Observable");
+       function arrowRight_clicked()
+{
+    router.push("photoshop");
+}
+
+        module.exports = {
+          arrowRight_clicked : arrowRight_clicked  
+        };
+	</JavaScript>
+	<ActivatingAnimation>
+		<Change Bar1.Percentage="95%" Duration="1.8" Easing="QuinticOut" DurationBack="0.4"/>
+		<Callback Handler="{SoftwareUpdate}" />
+	</ActivatingAnimation>
+	<ScrollView SnapMinTransform="true" >
+			<StackPanel  MaxWidth="450">
+				<Components.Title Text="Adobe Illustrator" TitleColor="PrimarySolid"/>
+				<Grid Columns="1*,3*,1*" Margin="30,0,30,0">
+					<LeftArrow Visibility="Hidden"/>	
+					<StackPanel Alignment="Center">
+						<IllustratorLogo/>
+						<Components.Score Stop1="#FC9E11" Stop2="#FDC25A" Percentage="0%" Text="9.5" ux:Name="Bar1"/>
+					</StackPanel>
+					<RightArrow/>
+				</Grid>
+				
+				<StackPanel Alignment="Center" Width="80%">
+					<BodyCopy Color="TextGrey" Margin="0,50,0,0" Alignment="Left">
+						From vector art to icon design, I have a little crush on Illustrator and it’s lovely capabilities. 
+					</BodyCopy>
+					<Text TextColor="PrimarySolid" Font="Lato_Regular" FontSize="16" Margin="0,10,0,0" Alignment="Left" Value="See my favourite piece of work here">
+						<Clicked>
+							<LaunchUri Uri="https://www.behance.net/gallery/28244691/Digital-Art-Polygon-Pieces" />
+						</Clicked>
+						<Rectangle Height="1" Color="PrimarySolid" Alignment="Bottom"/>
+					</Text>
+				</StackPanel>
+			</StackPanel>
+		
+	</ScrollView>
+</Page>
+

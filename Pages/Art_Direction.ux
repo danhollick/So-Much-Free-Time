@@ -1,0 +1,39 @@
+<Page ux:Class="Art_Direction">
+	<Router ux:Dependency="router" />
+	<JavaScript>
+	var Observable = require("FuseJS/Observable");
+       function arrowRight_clicked()
+{
+    router.push("layout");
+}
+      function arrowLeft_clicked()
+{
+    router.goBack();
+}
+
+        module.exports = {
+          arrowLeft_clicked : arrowLeft_clicked,
+          arrowRight_clicked : arrowRight_clicked  
+        };
+	</JavaScript>
+	<ActivatingAnimation>
+		<Change Stroke1.Degrees="0" Duration="1.8" Easing="QuinticOut" DurationBack="0.4"/>
+		<Callback Handler="{SkillsUpdate}" />
+	</ActivatingAnimation> 
+	<ScrollView>
+		<StackPanel MaxWidth="450">
+			<Components.Title Text="Art Direction" TitleColor="PrimarySolid"/>
+				<Grid Columns="1*,3*,1*" Margin="30,0,30,0">
+					<LeftArrow/>
+					<Components.CircleGraph Text="8.0" Degrees="270" Stop1="SecondarySolid" Stop2="#F6977590" ux:Name="Stroke1"/>
+					<RightArrow/>
+				</Grid>
+				<BodyCopy Color="TextGrey" Margin="0,50,0,0" Width="80%">
+I believe these two go hand in hand, understanding what makes up a brilliant image is just as valuable as taking a technically perfect shot. 
+I’m proud of the fact that I can perfect what I’m looking at, and also be the one to capture it.  
+				</BodyCopy>
+		</StackPanel>
+	</ScrollView>
+</Page>
+
+

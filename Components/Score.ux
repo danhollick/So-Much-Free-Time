@@ -1,0 +1,17 @@
+<Panel ux:Class="Components.Score">
+	<Rectangle Margin="0,20,0,0" Width="100%" Height="25" Color="LightGrey">
+				<Text Font="Lato_Light" FontSize="20" TextColor="White" Alignment="Center" Value="{Property this.Text}"/>
+				<string ux:Property="Text"/>
+				<Rectangle Width="{Property this.Percentage}" Height="25" Alignment="Left">
+				<Size ux:Property="Percentage"/>
+					<LinearGradient StartPoint="1,1" EndPoint="0,0">
+					    <GradientStop Offset="0" Color="{Property this.Stop1}" >
+					    	<float4 ux:Property="Stop1"/>
+					    </GradientStop>
+					    <GradientStop Offset="1" Color="{Property this.Stop2}" >
+					    	<float4 ux:Property="Stop2"/>
+					    </GradientStop>
+					</LinearGradient>
+				</Rectangle>
+	</Rectangle>
+</Panel>

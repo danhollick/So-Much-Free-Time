@@ -1,0 +1,19 @@
+<Page ux:Name="Splash" ux:Class="SplashPage" Transition="None">
+	<ExitingAnimation>
+		<Move X="-1" RelativeTo="Size" Duration="0.6" Easing="QuadraticOut" />
+		<Move Y="-1" RelativeTo="Size" Duration="0.6" Easing="QuadraticOut" />
+		<Rotate Target="splash_logo" Duration="0.4" Degrees="180" />
+		<Scale Target="splash_logo" Factor="2" Duration="0.4" />
+	</ExitingAnimation>
+	<Clicked>
+		<Callback Handler="{home_clicked}" />
+	</Clicked>
+	<Router ux:Dependency="router" />
+	<StackPanel Alignment="Center" ux:Name="splash_logo">
+		<FeatherIcon Width="48" Height="48" Anchor="50%,50%" TransformOrigin="Anchor"/>
+		<Text Font="Lato_Regular" TextAlignment="Center" ux:Name="splash_text" FontSize="24" TextColor="White" Alignment="Center" TextWrapping="Wrap"> Welcome. 
+
+Tap to continue.</Text>
+	</StackPanel>
+	<Rectangle Color="PrimarySolid" />
+</Page>

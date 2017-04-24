@@ -1,0 +1,22 @@
+<Panel Alignment="Center" ux:Class="Components.CircleGraph">
+	<Circle Width="160" Height="160" Opacity="0.6" StartAngleDegrees="{Property this.Degrees}" EndAngleDegrees="-90" ux:Name="Stroke1">
+		<float ux:Property="Degrees"/>
+			<Stroke Width="36" Alignment="Center" >
+					<LinearGradient AngleDegrees="200">
+					    <GradientStop Offset="0" Color="{Property this.Stop1}" >
+					    	<float4 ux:Property="Stop1"/>
+					    </GradientStop>
+					    <GradientStop Offset="1" Color="{Property this.Stop2}" >
+					    	<float4 ux:Property="Stop2"/>
+					    </GradientStop>
+					</LinearGradient>
+			</Stroke>
+	</Circle>
+	<Circle Width="160" Height="160" >
+		<Stroke Color="LightGrey" Width="22" Alignment="Center"/>
+	</Circle>
+	<Text Font="Lato_Light" FontSize="64" TextColor="TextGrey"  Value="{Property this.Text}" Alignment="Center">
+	<string ux:Property="Text"/>
+	</Text>
+	
+</Panel>

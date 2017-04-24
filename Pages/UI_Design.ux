@@ -1,0 +1,35 @@
+<Page ux:Class="UI_Design">
+	<Router ux:Dependency="router" />
+	<JavaScript>
+	var Observable = require("FuseJS/Observable");
+      function arrowLeft_clicked()
+{
+    router.goBack();
+}
+
+        module.exports = {
+          arrowLeft_clicked : arrowLeft_clicked,
+            
+        };
+	</JavaScript>
+	<ActivatingAnimation>
+		<Change Stroke1.Degrees="36" Duration="1.8" Easing="QuinticOut" DurationBack="0.4"/>
+		<Callback Handler="{SkillsUpdate}" />
+	</ActivatingAnimation>
+	<ScrollView>
+		<StackPanel MaxWidth="450"> 
+			<Components.Title Text="User Interface Design" TitleColor="PrimarySolid"/>
+			<Grid Columns="1*,3*,1*" Margin="30,0,30,0">
+				<LeftArrow/>
+				<Components.CircleGraph Stop1="PrimarySolid" Stop2="#90E3D390" Degrees="270" Text="7.0"  ux:Name="Stroke1"/>
+				<RightArrow Visibility="Hidden" />
+			</Grid>
+			<BodyCopy Color="TextGrey" Margin="0,50,0,0" Width="80%">
+				Much with every other skill, I am learning on a daily basis - I am paying a particular interest to UI design. I believe that it is in everything we do and interact with on a daily basis and I would thrive in a position where I could learn and grow into an effective UI designer.
+			</BodyCopy>
+		</StackPanel>
+	</ScrollView>
+</Page>
+
+
+

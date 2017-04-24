@@ -1,0 +1,212 @@
+<Panel ux:Class="Resources">
+	<!--Fonts-->
+	<Font File="Assets/Fonts/Lato-Light.ttf" ux:Global="Lato_Light" />
+	<Font File="Assets/Fonts/Lato-Regular.ttf" ux:Global="Lato_Regular" />
+	<Font File="Assets/Fonts/Lato-Bold.ttf" ux:Global="Lato_Bold" />
+	<Font File="Assets/Fonts/Lato-Hairline.ttf" ux:Global="Lato_Hairline" />
+	<!--/Fonts-->
+	<!--Icons-->
+	<!--Feather-->
+	<Image ux:Class="FeatherIcon">
+	    <MultiDensityImageSource>
+	        <FileImageSource File="Assets/Images/Feather_Icon_Grey.png" Density="1" />
+	        <FileImageSource File="Assets/Images/Feather_Icon_Grey@2x.png" Density="2" />
+	        <FileImageSource File="Assets/Images/Feather_Icon_Grey@3x.png" Density="3" />
+	    </MultiDensityImageSource>
+	</Image>
+	<!--Behance-->
+	<Image ux:Class="Behance_Logo" ux:Name="behance_logo">
+	    <MultiDensityImageSource>
+	        <FileImageSource File="Assets/Images/Behance_Logo.png" Density="1" />
+	        <FileImageSource File="Assets/Images/Behance_Logo@2x.png" Density="2" />
+	        <FileImageSource File="Assets/Images/Behance_Logo@3x.png" Density="3" />
+	    </MultiDensityImageSource>
+	    <WhilePressed>
+	    	<Scale Target="behance_logo" Factor="0.8" Duration="0.1" Easing="QuinticIn" />
+	    </WhilePressed>
+	    <Clicked>
+				<LaunchUri Uri="https://www.behance.net/isheyelike" />
+		</Clicked>
+	</Image>
+	<!--Instagram-->
+	<Image ux:Class="Instagram_Logo" ux:Name="instagram_logo">
+	    <MultiDensityImageSource>
+	        <FileImageSource File="Assets/Images/Instagram_Logo.png" Density="1" />
+	        <FileImageSource File="Assets/Images/Instagram_Logo@2x.png" Density="2" />
+	        <FileImageSource File="Assets/Images/Instagram_Logo@3x.png" Density="3" />
+	    </MultiDensityImageSource>
+	    <WhilePressed>
+	    	<Scale Target="instagram_logo" Factor="0.8" Duration="0.1" Easing="QuinticIn" />
+	    </WhilePressed>
+	    <Clicked>
+				<LaunchUri Uri="https://www.instagram.com/isheyelike/" />
+		</Clicked>
+	</Image>
+	<!--LinkedIn-->
+	<Image ux:Class="Linkedin_Logo" ux:Name="linkedin_logo">
+	    <MultiDensityImageSource>
+	        <FileImageSource File="Assets/Images/Linkedin_Logo.png" Density="1" />
+	        <FileImageSource File="Assets/Images/Linkedin_Logo@2x.png" Density="2" />
+	        <FileImageSource File="Assets/Images/Linkedin_Logo@3x.png" Density="3" />
+	    </MultiDensityImageSource>
+	    <WhilePressed>
+	    	<Scale Target="linkedin_logo" Factor="0.8" Duration="0.1" Easing="QuinticIn" />
+	    </WhilePressed>
+	    <Clicked>
+			<LaunchUri Uri="https://www.linkedin.com/in/tanya-hirst-5025497a" />
+		</Clicked>
+	</Image>
+	<!--Twitter-->
+	<Image ux:Class="Twitter_Logo" ux:Name="twitter_logo">
+	    <MultiDensityImageSource>
+	        <FileImageSource File="Assets/Images/Twitter_Logo.png" Density="1" />
+	        <FileImageSource File="Assets/Images/Twitter_Logo@2x.png" Density="2" />
+	        <FileImageSource File="Assets/Images/Twitter_Logo@3x.png" Density="3" />
+	    </MultiDensityImageSource>
+	    <WhilePressed>
+	    	<Scale Target="twitter_logo" Factor="0.8" Duration="0.1" Easing="QuinticIn" />
+	    </WhilePressed>
+	    <Clicked>
+				<LaunchUri Uri="https://twitter.com/isheyelike" />
+		</Clicked>
+	</Image>
+	<!--LogoType-->
+	<Image Width="80%" Alignment="TopCenter" Margin="0,25,0,15" ux:Class="LogoType">
+	    <MultiDensityImageSource>
+	        <FileImageSource File="Assets/Images/Tanya_Hirst_Logo.png" Density="1" />
+	        <FileImageSource File="Assets/Images/Tanya_Hirst_Logo@2x.png" Density="2" />
+	        <FileImageSource File="Assets/Images/Tanya_Hirst_Logo@3x.png" Density="3" />
+	    </MultiDensityImageSource>
+	</Image>
+	<!--Illustrator-->
+	<Image ux:Class="IllustratorLogo" >
+	    <MultiDensityImageSource>
+	        <FileImageSource File="Assets/Images/illustrator_logo.png" Density="1"/>
+	        <FileImageSource File="Assets/Images/illustrator_logo@2x.png" Density="2"/>
+	        <FileImageSource File="Assets/Images/illustrator_logo@3x.png" Density="3"/>
+	    </MultiDensityImageSource>
+	</Image>
+	<!--Indesign-->
+	<Image ux:Class="IndesignLogo">
+	    <MultiDensityImageSource>
+	        <FileImageSource File="Assets/Images/indesign_logo.png" Density="1"/>
+	        <FileImageSource File="Assets/Images/indesign_logo@2x.png" Density="2"/>
+	        <FileImageSource File="Assets/Images/indesign_logo@3x.png" Density="3"/>
+	    </MultiDensityImageSource>
+	</Image>
+	<!--Invison-->
+	<Image ux:Class="InvisionLogo" >
+	    <MultiDensityImageSource>
+	        <FileImageSource File="Assets/Images/invision_logo.png" Density="1"/>
+	        <FileImageSource File="Assets/Images/invision_logo@2x.png" Density="2"/>
+	        <FileImageSource File="Assets/Images/invision_logo@3x.png" Density="3"/>
+	    </MultiDensityImageSource>
+	</Image>
+	<!--Photoshop-->
+	<Image ux:Class="PhotoshopLogo">
+	    <MultiDensityImageSource>
+	        <FileImageSource File="Assets/Images/photoshop_logo.png" Density="1"/>
+	        <FileImageSource File="Assets/Images/photoshop_logo@2x.png" Density="2"/>
+	        <FileImageSource File="Assets/Images/photoshop_logo@3x.png" Density="3"/>
+	    </MultiDensityImageSource>
+	</Image>
+	<!--Sketch-->
+	<Image ux:Class="SketchLogo">
+	    <MultiDensityImageSource>
+	        <FileImageSource File="Assets/Images/sketch_logo.png" Density="1"/>
+	        <FileImageSource File="Assets/Images/sketch_logo@2x.png" Density="2"/>
+	        <FileImageSource File="Assets/Images/sketch_logo@3x.png" Density="3"/>
+	    </MultiDensityImageSource>
+	</Image>
+	<!--PinIcon-->
+	<Image ux:Class="PinIcon" StretchMode="PointPrefer">
+	    <MultiDensityImageSource>
+	        <FileImageSource File="Assets/Images/Pin_Icon.png" Density="1"/>
+	        <FileImageSource File="Assets/Images/Pin_Icon@2x.png" Density="2"/>
+	        <FileImageSource File="Assets/Images/Pin_Icon@3x.png" Density="3"/>
+	    </MultiDensityImageSource>
+	</Image>
+	<!--PhoneIcon-->
+	<Image ux:Class="PhoneIcon" StretchMode="PointPrefer" >
+	    <MultiDensityImageSource>
+	        <FileImageSource File="Assets/Images/Phone_Icon.png" Density="1"/>
+	        <FileImageSource File="Assets/Images/Phone_Icon@2x.png" Density="2"/>
+	        <FileImageSource File="Assets/Images/Phone_Icon@3x.png" Density="3"/>
+	    </MultiDensityImageSource>
+	</Image>
+	<!--MailIcon-->
+	<Image ux:Class="MailIcon" StretchMode="PointPrefer" >
+	    <MultiDensityImageSource>
+	        <FileImageSource File="Assets/Images/Mail_Icon.png" Density="1"/>
+	        <FileImageSource File="Assets/Images/Mail_Icon@2x.png" Density="2"/>
+	        <FileImageSource File="Assets/Images/Mail_Icon@3x.png" Density="3"/>
+	    </MultiDensityImageSource>
+	</Image>
+	<!--WebIcon-->
+	<Image ux:Class="WebIcon" StretchMode="PointPrefer" >
+	    <MultiDensityImageSource>
+	        <FileImageSource File="Assets/Images/Web_Icon.png" Density="1"/>
+	        <FileImageSource File="Assets/Images/Web_Icon@2x.png" Density="2"/>
+	        <FileImageSource File="Assets/Images/Web_Icon@3x.png" Density="3"/>
+	    </MultiDensityImageSource>
+	</Image>
+	<!--Close-->
+	<Panel ux:Class="Close">
+		<Rectangle Height="2" Width="20" Color="White" Margin="0,20,20,10" Alignment="CenterRight" ux:Name="Exit">
+			<Rotation Degrees="45" />
+		</Rectangle>
+		<Rectangle Height="2" Width="20" Color="White" Margin="0,20,20,10" Alignment="CenterRight" ux:Name="Exit2">
+			<Rotation Degrees="-45" />
+		</Rectangle>
+		<WhilePressed>
+			<Change Target="Exit.Color" Value="#fff6" />
+			<Change Target="Exit2.Color" Value="#fff6" />
+
+			<Scale Target="Exit2" Factor="0.8" />
+			<Scale Target="Exit" Factor="0.8" />
+		</WhilePressed>
+	</Panel>
+	<!--Hamburger-->
+	<WrapPanel  ux:Class="Hamburger">
+		<StackPanel Margin="20,0,0,0" Height="48" ux:Name="HamburgerIcon" Alignment="Center" Background="#fff0">
+			<WhilePressed>
+				<Scale Target="HamburgerIcon" Factor="0.8" />
+			</WhilePressed>
+			<Rectangle ux:Class="HBLine" ux:Name="HB_1" Height="2" Color="White" Width="20" Margin="2">
+			<WhilePressed>
+				<Change HB_1.Color="LightGrey" />
+			</WhilePressed>	
+		</Rectangle>
+		<HBLine />
+		<HBLine />
+		<HBLine />
+		</StackPanel>
+		<Text Value="{headerTitle}" TextColor="White" Alignment="CenterLeft" Margin="20,0,0,0" Font="Lato_Light" FontSize="18">
+		</Text>
+	</WrapPanel>
+	<!--/Icons-->
+	<!--Images-->
+	<!--HeaderImage-->
+	<Image Width="100%" Alignment="TopCenter" ux:Class="HeaderImage">
+	    <MultiDensityImageSource>
+	        <FileImageSource File="Assets/Images/Home_Header.png" Density="1" />
+	        <FileImageSource File="Assets/Images/Home_Header@2x.png" Density="2" />
+	        <FileImageSource File="Assets/Images/Home_Header@3x.png" Density="3" />
+	    </MultiDensityImageSource>
+	</Image>
+	<!--ContactImage-->
+	<Image ux:Class="ContactImage" >
+	    <MultiDensityImageSource>
+	        <FileImageSource File="Assets/Images/Contact_Image.png" Density="1"/>
+	        <FileImageSource File="Assets/Images/Contact_Image@2x.png" Density="2"/>
+	        <FileImageSource File="Assets/Images/Contact_Image@3x.png" Density="3"/>
+	    </MultiDensityImageSource>
+	</Image>
+	<!--/Images-->
+	<!-- Text Styles -->
+	<Text ux:Class="MenuItem" Font="Lato_Light" FontSize="24" TextColor="White" Margin="20,10,0,10" Alignment="Left" Opacity="1">
+		<WhilePressed>
+			<Change Target="this.Opacity" Value="0.6" />
+		</WhilePressed>
+	</Text>
+</Panel>

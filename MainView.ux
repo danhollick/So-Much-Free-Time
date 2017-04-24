@@ -1,0 +1,40 @@
+<App> 
+	<JavaScript File="MainView.js" />
+	<!-- this is the router instantiation-->
+	<Router ux:Name="router" />
+	<!-- ClientPanel makes space for the native StatusBars and BottomBars -->
+	<ClientPanel>
+		<DockPanel>
+			<Menu ux:Name="globalMenu" Visibility="Visible" />
+	   	</DockPanel> 
+		<!-- This prevents a landscape view. Could maybe rather rework the layout to work better on Tablet -->
+		<!--<WhileWindowLandscape>
+	         <Text Value="Please turn me around" TextColor="DarkGrey1" Font="Lato_Regular" FontSize="24" Alignment="Center" />
+	         <Rectangle Color="White1" />
+	     </WhileWindowLandscape> -->
+	     <!-- This is a list of all the pages the Router can navigate to. -->
+	    <Navigator DefaultPath="splash">
+	    	<SplashPage ux:Template="splash" router="router">
+	    		<WhileActive>
+	    			<Change Target="globalMenu.Visibility" Value="Hidden" />
+	    		</WhileActive>
+	    		<WhileInactive>
+	    			<Change Target="globalMenu.Visibility" Value="Visible" />
+	    		</WhileInactive>
+	    	</SplashPage>
+	    	<HomePage ux:Template="home" router="router" />
+			<ExperiencePage ux:Template="experience" router="router" />
+			<ContactPage ux:Template="contact" router="router" Opacity="1" />
+			<Creative ux:Template="creative" router="router" />
+			<Branding ux:Template="branding" router="router" />
+			<Art_Direction ux:Template="art_direction" router="router" />
+			<Layout ux:Template="layout" router="router" />
+			<UI_Design ux:Template="ui_design" router="router" />
+			<Illustrator ux:Template="illustrator" router="router" />
+		    <Photoshop ux:Template="photoshop" router="router" />
+		    <InDesign ux:Template="indesign" router="router" />
+		    <Sketch ux:Template="sketch" router="router" />
+		    <InVision ux:Template="invision" router="router" />
+	    </Navigator>
+  	</ClientPanel>
+</App>
